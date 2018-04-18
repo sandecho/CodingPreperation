@@ -9,7 +9,7 @@ public class ArrayProblem2 {
         {
             int temp = arr[i];
             arr[i] = arr[len-1-i];
-            arr[len-1-i]=temp;
+            arr[len-1-i]=temp
         }
     }
 
