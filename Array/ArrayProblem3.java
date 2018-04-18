@@ -1,15 +1,18 @@
-//Write a program to reverse an array or string
+//Write a program to reverse an array or string recursively
 
 
-public class ArrayProblem2 {
+public class ArrayProblem3 {
 
-    void reverse(int arr[]) {
-        int len = arr.length;
-        for(int i=0; i<len/2; i++)
+    void reverse(int arr[], int start, int end) {
+
+        if(start<end)
         {
-            int temp = arr[i];
-            arr[i] = arr[len-1-i];
-            arr[len-1-i]=temp;
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end]=temp;
+            end--;
+            start++;
+            reverse(arr, start, end);
         }
     }
 
@@ -28,10 +31,10 @@ public class ArrayProblem2 {
         for(int i=0; i<13; i++)
             arr[i]=i+1;
 
-        ArrayProblem2 prob = new ArrayProblem2();
+        ArrayProblem3 prob = new ArrayProblem3();
         prob.display(arr);
 
-        prob.reverse(arr);
+        prob.reverse(arr, 0, arr.length-1);
         prob.display(arr);
     }
 }
