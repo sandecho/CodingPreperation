@@ -21,6 +21,10 @@ public class PallindromeList {
         return this.head;
     }
 
+    private void setHead(Node node) {
+        this.head=node;
+    }
+
     public PallindromeList() {
         this.head=null;
     }
@@ -55,9 +59,9 @@ public class PallindromeList {
         if(node==null || node.next==null)
             return node;
 
-        Node curr=head;
+        Node curr=node;
         Node prev=null;
-        Node next=head.next;
+        Node next=node.next;
 
         while(next!=null) {
             curr.next=prev;
@@ -66,7 +70,6 @@ public class PallindromeList {
             next=next.next;
         }
         curr.next=prev;
-        head=curr;
         return curr;
     }
 
@@ -103,21 +106,28 @@ public class PallindromeList {
 
     public static void main(String args[]) {
         PallindromeList list = new PallindromeList();
+
+        //  list.addAtBegining(6);
         list.addAtBegining(5);
         list.addAtBegining(4);
         list.addAtBegining(3);
         list.addAtBegining(2);
         list.addAtBegining(1);
-        list.display();
-        list.reverseList(list.getHead());
+        System.out.println("Displaying Original List");
         list.display();
 
-        list.addAtBegining(6);
+        Node node = list.reverseList(list.getHead());
+        list.setHead(node);
+        System.out.println("Displaying Reverse List");
+        list.display();
+
         Node head= list.getHead();
         list.display(head);
         Node mid= list.getMidNode(head);
+        System.out.println("Displaying from Mid Node");
         list.display(mid);
-        list.reverseList(mid);
+        mid = list.reverseList(mid);
+        System.out.println("Displaying Half List from start");
         list.display(head);
         list.display(mid);
 
