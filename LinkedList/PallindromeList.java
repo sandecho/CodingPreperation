@@ -1,3 +1,4 @@
+
 /*
 Function to check if a singly linked list is palindrome
 
@@ -82,12 +83,22 @@ public class PallindromeList {
 
     }
 
+    public Node getMidNode(Node node) {
+        Node temp1=node;
+        Node temp2=node;
 
-    public Node middleNode() {
+        if(temp1==null || temp1.next==null) {
+            return temp1;
+        }
 
+        while(temp2!=null && temp2.next!=null) {
+            temp1=temp1.next;
+            temp2=temp2.next.next;
+        }
 
-        return null;
+        return temp1;
     }
+
 
 
     public static void main(String args[]) {
@@ -100,6 +111,15 @@ public class PallindromeList {
         list.display();
         list.reverseList(list.getHead());
         list.display();
+
+        list.addAtBegining(6);
+        Node head= list.getHead();
+        list.display(head);
+        Node mid= list.getMidNode(head);
+        list.display(mid);
+        list.reverseList(mid);
+        list.display(head);
+        list.display(mid);
 
 
     }
