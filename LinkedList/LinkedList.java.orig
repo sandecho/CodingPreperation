@@ -1,17 +1,17 @@
 public class LinkedList {
 
-    class Node {
+class Node {
 
-        private int data;
+    private int data;
 
-        private Node next;
+    private Node next;
 
-        public  Node(int data) {
-            this.data=data;
-            this.next=null;
-        }
-
+    public  Node(int data) {
+        this.data=data;
+        this.next=null;
     }
+
+}
 
     private Node head;
 
@@ -198,39 +198,6 @@ public class LinkedList {
         }
 
         return temp2.data;
-    }
-    
-    
-    public void seggregateEvenOdd(){
-        
-        if(head==null || head.next==null)
-            return;
-        
-        Node temp=head;
-        Node oddPtr=null;
-        Node evenPtr =null;
-        
-        while(temp!=null && temp.data%2!=0){
-            temp=temp.next;
-        }
-        if(temp==null)
-            return;
-        
-        evenPtr=temp;
-        temp=head;
-        
-        while(temp!=null && temp.data%2==0){
-            temp=temp.next;
-        }
-        if(temp==null)
-            return;
-        
-        oddPtr=temp;
-        
-        while(oddPtr!=null && evenPtr!=null ){
-            if(oddPtr.data%2==0){
-                
-        
     }
 
 

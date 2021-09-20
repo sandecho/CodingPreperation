@@ -52,7 +52,7 @@ public class RemoveDublicate {
     }
 
     public Node removeDublicate(Node node) {
-        
+
         if(node==null || node.next==null) {
             return node;
         }
@@ -71,7 +71,7 @@ public class RemoveDublicate {
             }
             temp1=temp1.next;
         }
-        
+
         return node;
 
     }
@@ -109,7 +109,7 @@ public class RemoveDublicate {
         sortedList.removeDublicateFromSortedList(head);
         System.out.println("Displaying  List after removing dublicate");
         sortedList.display(head);
-        
+
         sortedList = new RemoveDublicate();
 
         sortedList.addAtBegining(1);
