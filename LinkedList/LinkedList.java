@@ -199,80 +199,80 @@ public class LinkedList {
 
         return temp2.data;
     }
-    
-    
-    public void seggregateEvenOdd(){
-        
+
+
+    public void seggregateEvenOdd() {
+
         if(head==null || head.next==null)
             return;
-        
+
         Node temp=head;
         Node oddPtr=null;
         Node evenPtr =null;
-        
-        while(temp!=null && temp.data%2!=0){
+
+        while(temp!=null && temp.data%2!=0) {
             temp=temp.next;
         }
         if(temp==null)
             return;
-        
+
         evenPtr=temp;
         temp=head;
-        
-        while(temp!=null && temp.data%2==0){
+
+        while(temp!=null && temp.data%2==0) {
             temp=temp.next;
         }
         if(temp==null)
             return;
-        
+
         oddPtr=temp;
-        
-        while(oddPtr!=null && evenPtr!=null ){
-            if(oddPtr.data%2==0){
-                
-        
-    }
+
+        while(oddPtr!=null && evenPtr!=null ) {
+            if(oddPtr.data%2==0) {
+
+
+            }
 
 
 
 
-    public static void main(String args[]) {
-        LinkedList list = new LinkedList();
-        list.addAtBegining(3);
-        list.display();
-        System.out.println("Element  in middle is " + list.middleNode());
-        list.addAtBegining(2);
-        list.display();
-        System.out.println("Element  in middle is " + list.middleNode());
-        list.addAtBegining(1);
-        list.addAtEnd(4);
-        list.addAtEnd(5);
-        list.display();
-        System.out.println("Element  in middle is " + list.middleNode());
-        list.addAtEnd(6);
-        System.out.println("Element  in middle is " + list.middleNode());
+            public static void main(String args[]) {
+                LinkedList list = new LinkedList();
+                list.addAtBegining(3);
+                list.display();
+                System.out.println("Element  in middle is " + list.middleNode());
+                list.addAtBegining(2);
+                list.display();
+                System.out.println("Element  in middle is " + list.middleNode());
+                list.addAtBegining(1);
+                list.addAtEnd(4);
+                list.addAtEnd(5);
+                list.display();
+                System.out.println("Element  in middle is " + list.middleNode());
+                list.addAtEnd(6);
+                System.out.println("Element  in middle is " + list.middleNode());
 
-        list.display();
-        System.out.println("3 node from end " + list.nNodefromEnd(3));
-        System.out.println("5 node from end " + list.nNodefromEnd(5));
+                list.display();
+                System.out.println("3 node from end " + list.nNodefromEnd(3));
+                System.out.println("5 node from end " + list.nNodefromEnd(5));
 
-        System.out.println("Search 6 " + list.search(6));
-        System.out.println("Search 16 " + list.search(16, list.head));
-        System.out.println("The length is " + list.getLength());
-        System.out.println("Recursively the length is " + list.getLength(list.head));
-        list.deleteAtBeg();
-        list.deleteAtEnd();
-        list.display();
-        System.out.println("Recursively the length is " + list.getLength(list.head));
-        list.deleteAtBeg();
-        list.deleteAtEnd();
-        list.display();
-        System.out.println("Recursively the length is " + list.getLength(list.head));
-        list.deleteAtBeg();
-        list.deleteAtEnd();
-        list.display();
+                System.out.println("Search 6 " + list.search(6));
+                System.out.println("Search 16 " + list.search(16, list.head));
+                System.out.println("The length is " + list.getLength());
+                System.out.println("Recursively the length is " + list.getLength(list.head));
+                list.deleteAtBeg();
+                list.deleteAtEnd();
+                list.display();
+                System.out.println("Recursively the length is " + list.getLength(list.head));
+                list.deleteAtBeg();
+                list.deleteAtEnd();
+                list.display();
+                System.out.println("Recursively the length is " + list.getLength(list.head));
+                list.deleteAtBeg();
+                list.deleteAtEnd();
+                list.display();
 
-    }
-}
+            }
+        }
 
 

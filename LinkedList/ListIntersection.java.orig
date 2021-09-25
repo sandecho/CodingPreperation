@@ -56,10 +56,10 @@ public class ListIntersection {
             if(node1.data <node2.data) {
                 temp.next=node1;
                 node1=node1.next;
-            } else if(node2.data < node1.data) {
+            } else if(node2.data < node1.data){
                 temp.next=node2;
                 node2=node2.next;
-            } else if(node1.data==node2.data) {
+            } else if(node1.data==node2.data){
                 temp.next=node1;
                 node1=node1.next;
                 node2=node2.next;
@@ -70,27 +70,27 @@ public class ListIntersection {
 
 
     }
-
-    public Node changeLastNodetoHead(Node temp) {
-
+    
+    public Node changeLastNodetoHead(Node temp){
+        
         if(temp==null || temp.next==null)
             return temp;
-
+        
         Node temp1=temp;
         Node temp2=temp1.next;
-
-        while(temp2.next!=null) {
+        
+        while(temp2.next!=null){
             temp2=temp2.next;
             temp1=temp1.next;
         }
-
+        
         temp1.next=null;
         temp2.next=temp;
         return temp2;
-
-
+        
+        
     }
-
+    
 
 
 
@@ -136,7 +136,7 @@ public class ListIntersection {
         Node temp = list3.intersectTwoList(head1, head2);
         System.out.println("Displaying Intersected List");
         list3.display(temp);
-
+        
         temp=list3.changeLastNodetoHead(temp);
         System.out.println("Moving last to first");
         list3.display(temp);
